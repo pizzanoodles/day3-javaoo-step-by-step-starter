@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 
 public class Teacher extends Person {
     private List<Klass> classes = new ArrayList<>();
-    private Klass singleClass;
 
     public Teacher(int id, String name, int age) {
         super(id, name, age);
@@ -16,6 +15,10 @@ public class Teacher extends Person {
     @Override
     public String introduce() {
         if (this.classes.size() == 1) {
+            if (this.classes.get(0).getLeader() != null) {
+                return String.format("My name is %s. I am %d years old. I am a %s. I teach Class %d. I know %s become leader.",
+                        super.getName(), super.getAge(), "teacher", this.classes.get(0).getNumber(), this.classes.get(0).getLeader());
+            }
             return String.format("My name is %s. I am %d years old. I am a %s. I teach Class %d.",
                     super.getName(), super.getAge(), "teacher", this.classes.get(0).getNumber());
         } else {
@@ -47,5 +50,9 @@ public class Teacher extends Person {
 
     public boolean isTeaching(Student student) {
         return this.classes.contains(student.getKlass());
+    }
+
+    public List<Klass> getClasses() {
+        return classes;
     }
 }
