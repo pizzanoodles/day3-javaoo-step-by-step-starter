@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class KlassTest {
-
+//
 //    @Test
 //    public void should_return_false_when_equals_given_two_klass_with_different_id() {
 //        Klass klass1 = new Klass(1);
