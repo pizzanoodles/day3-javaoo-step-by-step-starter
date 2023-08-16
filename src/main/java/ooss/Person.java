@@ -10,9 +10,11 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
     public String introduce() {
         return String.format("My name is %s. I am %d years old.", name, age);
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -21,5 +23,14 @@ public class Person {
         return id == person.id;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public int getAge() {
+        return age;
+    }
+    public int getId() {
+        return id;
+    }
 }
