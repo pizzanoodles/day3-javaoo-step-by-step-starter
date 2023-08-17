@@ -23,6 +23,7 @@ public class Klass {
     }
 
     public void assignLeader(Student student) {
+        //TODO: this can be converted into Stream to make it shorter
         if (this == student.getKlass()) {
             this.leader = student;
             if (this.attachedTeacher != null) {
@@ -45,6 +46,8 @@ public class Klass {
     public Student getLeader() {
         return this.leader;
     }
+
+    //TODO: this can be converted into observer patter to avoid duplicate methods
 
     public void attach(Teacher teacher) {
         this.attachedTeacher = teacher;

@@ -11,8 +11,11 @@ public class Teacher extends Person {
         super(id, name, age);
     }
 
+    //TODO: alter code to past tests since some are pointing to NullPointerException and does not match string format
+
     @Override
     public String introduce() {
+        //TODO: this can be converted into Stream to make it shorter
         if (this.classes.size() == 1) {
             if (this.classes.get(0).getLeader() != null) {
                 return String.format("My name is %s. I am %d years old. I am a %s. I teach Class %d. I know %s become leader.",

@@ -8,6 +8,7 @@ public class Student extends Person {
         super(id, name, age);
     }
 
+    //TODO: alter code to past tests since some are pointing to NullPointerException and does not match string format
     @Override
     public String introduce() {
         return String.format("My name is %s. I am %d years old. I am a %s. I am in class %s.", super.getName(), super.getAge(), "student", klass.getNumber());
